@@ -28,6 +28,5 @@ public class MyFirstTest {
   public void canMultipleTwoByTwo() {
     int answer = 2 * 2;
     assertEquals("2*2=4", 4, answer);
-
   }
 }

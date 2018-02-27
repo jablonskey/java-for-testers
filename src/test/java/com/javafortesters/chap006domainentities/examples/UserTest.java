@@ -27,4 +27,14 @@ public class UserTest {
     user.setPassword("qwerty");
     assertEquals("setter password expected", "qwerty", user.getPassword());
   }
+
+  @Test
+  public void publikStatikHasCorrectValue() {
+    //    assertEquals("publikStatik has default value", "dupa", User.publikStatik);
+    User user = new User();
+    user.publikStatik = "zbita";
+    assertEquals("publikStatik change successful", "zbita", user.publikStatik);
+    User newUser = new User();
+    assertEquals("publikStatik for newUser has default value", "dupa", newUser.publikStatik);
+  }
 }
