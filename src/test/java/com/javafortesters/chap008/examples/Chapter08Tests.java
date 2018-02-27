@@ -57,21 +57,4 @@ public class Chapter08Tests {
       assertTrue(truthy);
     }
   }
-
-  @Test
-  public void switchExample() {
-    assertEquals("M", likelyGenderIs("sir"));
-    assertEquals("M", likelyGenderIs("mr"));
-    assertEquals("M", likelyGenderIs("master"));
-    assertEquals("F", likelyGenderIs("miss"));
-    assertEquals("F", likelyGenderIs("mrs"));
-  }
-
-  private String likelyGenderIs(String title) {
-    String likelyGender;
-
-    switch (title)
-
-    }
-  }
 }
