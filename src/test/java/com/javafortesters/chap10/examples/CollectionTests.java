@@ -1,4 +1,4 @@
-package com.javafortesters.chap009.examples;
+package com.javafortesters.chap10.examples;
 
 import org.junit.Assert;
 import org.junit.Rule;
