@@ -1,6 +1,5 @@
 package com.javafortesters.chap10.examples;
 
-import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
@@ -8,22 +7,19 @@ import org.junit.rules.ErrorCollector;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CollectionTests {
 
-  @Rule public ErrorCollector collector = new ErrorCollector();
+  @Rule
+  public ErrorCollector collector = new ErrorCollector();
 
   @Test
   public void loopsExample() {
-    String[] someDays = {
-      "Tuesday", "Thursday", "Wednesday", "Monday", "Saturday", "Sunday", "Friday"
-    };
+    String[] someDays = {"Tuesday", "Thursday", "Wednesday", "Monday", "Saturday", "Sunday", "Friday"};
 
     List<String> days = Arrays.asList(someDays);
 

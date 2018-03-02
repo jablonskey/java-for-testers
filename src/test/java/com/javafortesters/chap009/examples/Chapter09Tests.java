@@ -10,66 +10,65 @@ import static org.junit.Assert.assertTrue;
 
 public class Chapter09Tests {
 
-    @Test
-    public void simpleArrayExample() {
-        String[] numbers0123 = {"zero", "one", "two", "three"};
+  @Test
+  public void simpleArrayExample() {
+    String[] numbers0123 = {"zero", "one", "two", "three"};
 
-        for (String numberText : numbers0123) {
-            System.out.println(numberText);
-        }
-
-        assertEquals("zero", numbers0123[0]);
-        assertEquals("three", numbers0123[3]);
+    for (String numberText : numbers0123) {
+      System.out.println(numberText);
     }
 
-    @Test
-    public void shouldCreateArrayOfUsers() {
+    assertEquals("zero", numbers0123[0]);
+    assertEquals("three", numbers0123[3]);
+  }
 
-        User[] users = {new User(), new User(), new User()};
+  @Test
+  public void shouldCreateArrayOfUsers() {
 
-        for (User user : users) {
-            assertTrue(user instanceof User);
-            System.out.println(user.getUsername());
-        }
+    User[] users = {new User(), new User(), new User()};
 
+    for (User user : users) {
+      assertTrue(user instanceof User);
+      System.out.println(user.getUsername());
     }
 
-    @Test
-    public void shouldCreateArrayOfHundredUsers() {
-        User[] users = new User[100];
+  }
 
-        for (int i = 0; i < 100; i++) {
-            users[i] = new User("username" + i, "password" + i);
-        }
+  @Test
+  public void shouldCreateArrayOfHundredUsers() {
+    User[] users = new User[100];
 
-        assertEquals(100, users.length);
-        int index = 0;
-        for (User user : users) {
-            assertEquals("username" + index, user.getUsername());
-            index++;
-        }
+    for (int i = 0; i < 100; i++) {
+      users[i] = new User("username" + i, "password" + i);
     }
 
-    @Test
-    public void shouldArraysBeFun() {
-        String[] workdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
-
-        String[] weekDays;
-
-        weekDays = Arrays.copyOf(workdays, 7);
-        assertEquals(null, weekDays[5]);
-        assertEquals(null, weekDays[6]);
-
-        String[] shortWorkDays;
-        shortWorkDays = Arrays.copyOfRange(workdays, 2, 5);
-
-        assertEquals(3, shortWorkDays.length);
-        assertEquals("Friday", shortWorkDays[2]);
-
-        int[] minusOne = new int[30];
-        Arrays.fill(minusOne, -1);
-
-
-
+    assertEquals(100, users.length);
+    int index = 0;
+    for (User user : users) {
+      assertEquals("username" + index, user.getUsername());
+      index++;
     }
+  }
+
+  @Test
+  public void shouldArraysBeFun() {
+    String[] workdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
+
+    String[] weekDays;
+
+    weekDays = Arrays.copyOf(workdays, 7);
+    assertEquals(null, weekDays[5]);
+    assertEquals(null, weekDays[6]);
+
+    String[] shortWorkDays;
+    shortWorkDays = Arrays.copyOfRange(workdays, 2, 5);
+
+    assertEquals(3, shortWorkDays.length);
+    assertEquals("Friday", shortWorkDays[2]);
+
+    int[] minusOne = new int[30];
+    Arrays.fill(minusOne, -1);
+
+
+  }
 }

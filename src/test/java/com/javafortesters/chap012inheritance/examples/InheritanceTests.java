@@ -4,10 +4,10 @@ import com.javafortesters.domainentities.AdminUser;
 import com.javafortesters.domainentities.EmptyUser;
 import com.javafortesters.domainentities.EmptyUserWithUrl;
 import com.javafortesters.domainentities.User;
-import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class InheritanceTests {
 
@@ -38,7 +38,6 @@ public class InheritanceTests {
     assertEquals("password", adminUser.getPassword());
     assertEquals("Elevated", adminUser.getPermission());
   }
-
 
 
 }

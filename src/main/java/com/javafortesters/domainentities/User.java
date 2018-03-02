@@ -2,10 +2,9 @@ package com.javafortesters.domainentities;
 
 public class User {
 
+  public String publikStatik = "dupa";
   protected String username;
   private String password;
-
-  public String publikStatik = "dupa";
 
   public User() {
     this("admin", "root");
