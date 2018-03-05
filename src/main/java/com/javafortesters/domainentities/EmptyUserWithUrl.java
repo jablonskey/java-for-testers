@@ -6,7 +6,7 @@ public class EmptyUserWithUrl extends EmptyUser {
 
   private String url;
 
-  public EmptyUserWithUrl() {
+  public EmptyUserWithUrl() throws InvalidPassword {
     this.url = TestAppEnv.getUrl();
   }
 

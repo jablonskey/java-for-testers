@@ -58,7 +58,7 @@ public class ExceptionsExampleClass {
     assertEquals("You are 18 years old", yourAge);
   }
 
-  @Test
+  @Test(expected = IllegalArgumentException.class)
   public void exampleTryCatchFinally() {
     Integer age = null;
 

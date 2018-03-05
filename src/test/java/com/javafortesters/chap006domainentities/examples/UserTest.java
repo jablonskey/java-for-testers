@@ -16,16 +16,16 @@ public class UserTest {
   public void userHasDefaultUsernameAndPassword() {
     User user = new User();
 
-    assertEquals("default username expected", "admin", user.getUsername());
-    assertEquals("default password expected", "root", user.getPassword());
+    assertEquals("default username expected", "user", user.getUsername());
+    assertEquals("default password expected", "password", user.getPassword());
   }
 
   @Test
-  public void canSetPasswordAfterConstructed() {
+  public void canSetPasswordAfterConstructed() throws User.InvalidPassword {
     User user = new User();
 
-    user.setPassword("qwerty");
-    assertEquals("setter password expected", "qwerty", user.getPassword());
+    user.setPassword("qwerty123");
+    assertEquals("setter password expected", "qwerty123", user.getPassword());
   }
 
   @Test

@@ -31,11 +31,10 @@ public class Chapter09Tests {
       assertTrue(user instanceof User);
       System.out.println(user.getUsername());
     }
-
   }
 
   @Test
-  public void shouldCreateArrayOfHundredUsers() {
+  public void shouldCreateArrayOfHundredUsers() throws User.InvalidPassword {
     User[] users = new User[100];
 
     for (int i = 0; i < 100; i++) {
@@ -68,7 +67,5 @@ public class Chapter09Tests {
 
     int[] minusOne = new int[30];
     Arrays.fill(minusOne, -1);
-
-
   }
 }

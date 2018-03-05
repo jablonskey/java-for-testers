@@ -12,14 +12,15 @@ import static org.junit.Assert.assertNotEquals;
 public class InheritanceTests {
 
   @Test
-  public void testEmptyUserShouldHaveEmptyUsernameAndPassword() {
+  public void testEmptyUserShouldHaveEmptyUsernameAndPassword() throws User.InvalidPassword {
     EmptyUser emptyUser = new EmptyUser();
     assertEquals(null, emptyUser.getUsername());
     assertEquals(null, emptyUser.getPassword());
   }
 
   @Test
-  public void testEmptyUserWithUrlShouldHaveNoUsernameAndPasswordAndCorrectUrl() {
+  public void testEmptyUserWithUrlShouldHaveNoUsernameAndPasswordAndCorrectUrl()
+      throws User.InvalidPassword {
     EmptyUserWithUrl emptyUserWithUrl = new EmptyUserWithUrl();
     System.out.println(emptyUserWithUrl.getUrl());
     assertNotEquals(null, emptyUserWithUrl.getUrl());
@@ -38,6 +39,4 @@ public class InheritanceTests {
     assertEquals("password", adminUser.getPassword());
     assertEquals("Elevated", adminUser.getPermission());
   }
-
-
 }

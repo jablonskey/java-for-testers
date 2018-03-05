@@ -14,12 +14,13 @@ import static org.junit.Assert.assertTrue;
 
 public class CollectionTests {
 
-  @Rule
-  public ErrorCollector collector = new ErrorCollector();
+  @Rule public ErrorCollector collector = new ErrorCollector();
 
   @Test
   public void loopsExample() {
-    String[] someDays = {"Tuesday", "Thursday", "Wednesday", "Monday", "Saturday", "Sunday", "Friday"};
+    String[] someDays = {
+      "Tuesday", "Thursday", "Wednesday", "Monday", "Saturday", "Sunday", "Friday"
+    };
 
     List<String> days = Arrays.asList(someDays);
 
@@ -75,13 +76,10 @@ public class CollectionTests {
     daysOfWeek.toArray(daysOfWeekArray);
     assertEquals(2, daysOfWeekArray.length);
 
-
     daysOfWeek.retainAll(workdays);
     assertTrue(daysOfWeek.isEmpty());
 
     workdays.clear();
     assertTrue(workdays.isEmpty());
-
-
   }
 }
