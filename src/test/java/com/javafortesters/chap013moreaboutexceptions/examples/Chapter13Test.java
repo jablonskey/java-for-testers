@@ -4,11 +4,9 @@ import com.javafortesters.domainentities.User;
 import com.javafortesters.domainentities.User.InvalidPassword;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
-public class Chapter13Tests {
+public class Chapter13Test {
 
   @Test
   public void canCreateDefaultUserWithoutHandlingException() {

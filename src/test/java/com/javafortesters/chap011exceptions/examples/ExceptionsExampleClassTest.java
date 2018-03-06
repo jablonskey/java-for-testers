@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ExceptionsExampleClass {
+public class ExceptionsExampleClassTest {
 
   @Test
   public void throwNullPointerExceptionAndHandleIt() {

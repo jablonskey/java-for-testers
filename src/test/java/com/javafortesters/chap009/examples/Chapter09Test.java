@@ -8,7 +8,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Chapter09Tests {
+public class Chapter09Test {
 
   @Test
   public void simpleArrayExample() {

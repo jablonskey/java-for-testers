@@ -9,7 +9,7 @@ import org.junit.rules.TestName;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-public class JunitExploredTests {
+public class JunitExploredTest {
 
   @Rule public ExpectedException expected = ExpectedException.none();
   @Rule public TestName testName = new TestName();
